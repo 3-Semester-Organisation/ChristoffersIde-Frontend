@@ -15,8 +15,8 @@ function App() {
     <footer>
 
     </footer>
-    </>
+
   )
 }
 
-export default App
+
