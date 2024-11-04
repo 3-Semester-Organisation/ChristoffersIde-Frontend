@@ -1,18 +1,15 @@
-import { useState } from 'react'
-import Input from './components/input'
-import Header from './components/Header'
+import Header from "./components/Header";
+import Dialog from "./components/Dialog";
 
 export default function App() {
-  
   return (
     <>
-    <header>
-      <Header />
-    </header>
-    
-    <Input />
-    
-    </>
+      <header>
+        <Header />
+      </header>
 
-  )
+      <Dialog />
+      
+    </>
+  );
 }
