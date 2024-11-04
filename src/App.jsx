@@ -2,7 +2,7 @@ import { useState } from 'react'
 import Input from './components/input'
 import Header from './components/Header'
 
-function App() {
+export default function App() {
   
   return (
     <>
@@ -12,11 +12,7 @@ function App() {
     
     <Input />
     
-    <footer>
-
-    </footer>
+    </>
 
   )
 }
-
-
