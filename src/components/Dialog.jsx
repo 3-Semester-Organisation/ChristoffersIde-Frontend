@@ -31,8 +31,13 @@ export default function Dialog() {
     return (
         <>
         <Backdrop />
-        
-        <div className="container mx-auto p-4 max-w-lg">
+
+        <div className="container mx-auto mt-20 p-4 max-w-lg">
+            <div className="text-center">
+                <h1 className="text-5xl mb-2 font-semibold" >Enter your name.</h1>
+                <h2 className="text-3xl mb-10 font-semibold" >Find your meal.</h2>
+            </div>
+            
 
             <Input handleFetch={handleFetch}/> {/* giver handleFetch funktionen videre til Input component */}
 
