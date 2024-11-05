@@ -4,6 +4,7 @@ import {Bars} from "react-loading-icons";
 import {fetchRecipeByUserRequest} from "../js/api/recipeapi.js";
 import Response from "./Response.jsx";
 import Header from "../components/Header.jsx";
+import Backdrop from "./backdrop/Backdrop.jsx";
 
 
 export default function IngredientSubmitter() {
@@ -43,6 +44,7 @@ export default function IngredientSubmitter() {
     return (
         <>
             <Header />
+            <Backdrop />
             <div className="relative mt-2 mb-10 rounded-md flex justify-center">
                 <form onSubmit={addIngredient} className="flex items-center">
                     <input

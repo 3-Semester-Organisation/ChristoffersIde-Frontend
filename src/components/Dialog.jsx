@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { fetchRecipeByPersonName } from "../js/api/recipeapi";
 import Input from "./input";
 import Response from "./Response";
+import Backdrop from "./backdrop/Backdrop";
 
 
 export default function Dialog() {
@@ -29,6 +30,8 @@ export default function Dialog() {
 
     return (
         <>
+        <Backdrop />
+        
         <div className="container mx-auto p-4 max-w-lg">
 
             <Input handleFetch={handleFetch}/> {/* giver handleFetch funktionen videre til Input component */}
