@@ -4,12 +4,8 @@ import Dialog from "./components/Dialog";
 export default function App() {
   return (
     <>
-      <header>
-        <Header />
-      </header>
-
+      <Header />
       <Dialog />
-      
     </>
   );
 }
