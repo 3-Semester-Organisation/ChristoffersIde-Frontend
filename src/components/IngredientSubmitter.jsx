@@ -26,14 +26,11 @@ export default function IngredientSubmitter() {
     }
 
 
-
-
-
-    function handleSubmit() {
+    async function handleSubmit() {
         try {
             setLoading(true);
-            setRecipe(fetchRecipeByUserRequest(ingredients, null))
-        }catch (error) {
+            setRecipe(await fetchRecipeByUserRequest(ingredients, null))
+        } catch (error) {
             console.error(error);
         } finally {
             setLoading(false);
@@ -43,7 +40,7 @@ export default function IngredientSubmitter() {
 
     return (
         <>
-            <Header />
+            <Header/>
             <Backdrop />
             <div className="relative mt-2 mb-10 rounded-md flex justify-center">
                 <form onSubmit={addIngredient} className="flex items-center">
@@ -72,8 +69,10 @@ export default function IngredientSubmitter() {
                 className="ml-2 cursor-pointer rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500"
                 disabled={loading} // samme som nedenunder
             >
-                {loading ? <Bars height="20px" width="46px"/> : "Submit"} {/* skifter mellem loading icon og submit alt efter state */}
+                {loading ? <Bars height="20px"
+                                 width="46px"/> : "Submit"} {/* skifter mellem loading icon og submit alt efter state */}
             </button>
+
 
             <IngredientList ingredients={ingredients}/>
 

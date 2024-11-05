@@ -4,7 +4,7 @@ export default function IngredientList({ ingredients }) {
             <h2>Ingredients</h2>
             <ul>
                 {ingredients.map((ingredient, index) => (
-                    <li key={index}>{ingredient}</li>
+                    <li key={index}>{"- " + ingredient}</li>
                 ))}
             </ul>
         </>

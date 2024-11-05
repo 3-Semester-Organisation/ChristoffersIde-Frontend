@@ -23,7 +23,7 @@ export async function fetchRecipeByUserRequest(ingredientList, dietaryRequiremen
         dietaryRequirements: dietaryRequirements
     }
 
-    const getOption = makeOption("GET", userSpecifications);
+    const getOption = makeOption("POST", userSpecifications);
     try {
         const response = await fetch(HOST + RECIPE_BY_USER_SPECIFICATION_URL, getOption);
         checkHttpErrors(response);
