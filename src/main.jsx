@@ -4,7 +4,7 @@ import './index.css'
 import App from './App.jsx'
 import {createBrowserRouter, RouterProvider} from 'react-router-dom';
 import NotFoundPage from "./components/NotFoundPage.jsx";
-import IngredientSubmitter from "./components/IngredientSubmitter.jsx";
+import RecipeByIngredientAndDietaryLimitations from "./components/RecipeByIngredientAndDietaryLimitations.jsx";
 import HomePage from "./components/HomePage.jsx";
 import Header from "./components/Header.jsx";
 import Dialog from "./components/Dialog.jsx";
@@ -17,11 +17,12 @@ const router = createBrowserRouter([
     },
     {
         path: '/recipe-person-name',
-        element: <Dialog/>
+        element: <Dialog/>,
+        errorElement: <NotFoundPage/>
     },
     {
         path: '/recipe',
-        element: <IngredientSubmitter />,
+        element: <RecipeByIngredientAndDietaryLimitations />,
         errorElement: <NotFoundPage/>
     }
 ]);
