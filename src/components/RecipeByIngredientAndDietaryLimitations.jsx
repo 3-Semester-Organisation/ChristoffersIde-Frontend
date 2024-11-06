@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Bars } from "react-loading-icons";
 import { fetchRecipeByUserRequest } from "../js/api/recipeapi.js";
-import Response from "./Response.jsx";
+import Response from "./recipebyname/Response.jsx";
 import Backdrop from "./backdrop/Backdrop.jsx";
 import IngredientList from "./IngredientList.jsx";
 

@@ -7,10 +7,12 @@ const RECIPE_BY_USER_SPECIFICATION_URL = "recipe-by-specification";
 export async function fetchRecipeByPersonName(name) {
     try {
         const response = await fetch(HOST + RECIPE_BY_PERSON_NAME_URL + "?name=" + name);
-        checkHttpErrors(response);
+        await checkHttpErrors(response);
         return await response.json();
     }catch (error) {
         console.error(error);
+        return error;
+
     }
 }
 

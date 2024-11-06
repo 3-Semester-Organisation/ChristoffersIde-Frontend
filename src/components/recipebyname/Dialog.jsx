@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { fetchRecipeByPersonName } from "../js/api/recipeapi";
-import Input from "./input";
+import { fetchRecipeByPersonName } from "../../js/api/recipeapi";
+import Input from "./Input";
 import Response from "./Response";
-import Backdrop from "./backdrop/Backdrop";
+import Backdrop from "../backdrop/Backdrop";
 
 
 export default function Dialog() {
@@ -17,7 +17,12 @@ export default function Dialog() {
     // vi laver fetch function her, så den kan gives videre til child component
     const handleFetch = async (name) => {
         const data = await fetchRecipeByPersonName(name);
-        setData(data.answer);
+        if (data.answer) {
+            setData(data.answer);
+        } else {
+            // errorhandling
+            setData(data.message);
+        }
         setVisible(true);
     }
 
