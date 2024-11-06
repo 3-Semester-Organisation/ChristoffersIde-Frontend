@@ -16,9 +16,10 @@ export default function Dialog() {
 
     // vi laver fetch function her, så den kan gives videre til child component
     const handleFetch = async (name) => {
+        setVisible(false);
         const data = await fetchRecipeByPersonName(name);
         if (data.answer) {
-            setData(data.answer);
+            setData(JSON.parse(data.answer)); // henter description og ingredients ud af answer
         } else {
             // errorhandling
             setData(data.message);
@@ -50,7 +51,7 @@ export default function Dialog() {
         <div className="container mx-auto p-4" >
             <div className={`fade-in ${visible ? "visible" : ""}`}>
 
-                <Response data={data}/> {/* giver "data" state videre som prop til Response component  */}
+                <Response data={ data }/> {/* giver "data" state videre som prop til Response component  */}
 
             </div>
         </div>
