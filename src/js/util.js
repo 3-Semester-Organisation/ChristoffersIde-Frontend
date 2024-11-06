@@ -23,10 +23,10 @@ function makeOption(httpMethod, body) {
 
 
 
-function checkHttpErrors(response) {
+async function checkHttpErrors(response) {
     if (!response.ok) {
-        const errorResponse = response.json();
-        const error = new Error(errorResponse.message);
+        const errorResponse = await response.json();
+        const error = new Error(errorResponse.answer);
         error.apiError = errorResponse;
         error.status = response.status;
         throw error;
