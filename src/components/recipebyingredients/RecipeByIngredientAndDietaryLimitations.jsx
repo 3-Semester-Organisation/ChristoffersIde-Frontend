@@ -36,10 +36,18 @@ export default function RecipeByIngredientAndDietaryLimitations() {
 
   async function handleSubmit() {
     try {
-      setLoading(true);
-      setRecipe(
-        await fetchRecipeByUserRequest(ingredients, dietaryLimitations)
-      );
+        setLoading(true);
+
+        const dietaryLimitationsPayload = {
+            vegan: dietaryLimitations["Vegan"],
+            vegetarian: dietaryLimitations["Vegetarian"],
+            lactoseIntolerant: dietaryLimitations["Lactose Intolerant"],
+            glutenIntolerant: dietaryLimitations["Gluten Intolerant"]
+        };
+
+        const data = await fetchRecipeByUserRequest(ingredients, dietaryLimitationsPayload);
+        setRecipe((JSON.parse(data.answer)));
+
     } catch (error) {
       console.error(error);
     } finally {
