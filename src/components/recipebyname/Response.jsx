@@ -25,13 +25,13 @@ export default function Response({ data }) { // modtager data fra parent compone
       </div>
       <div className="w-3/5" >
       <h2 className="text-2xl font-bold mb-5">Fremgangsmåde:</h2>
-      <ol className="list-decimal list-inside">
+      <ul className="list-decimal list-inside">
         {data.instructions.map((instruction, index) => (
           <li className="p-2" key={index}>
             {instruction}
           </li>
         ))}
-      </ol>
+      </ul>
       </div>
       </div>
     </div>
