@@ -20,7 +20,7 @@ export default function Navbar() {
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div className="relative flex h-16 items-center justify-between">
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
-            <Disclosure.Button className="group relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+            <Disclosure.Button className="group relative inline-flex items-center justify-center rounded-md p-2 text-gray-800 hover:bg-indigo-600 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
               <span className="sr-only">Open main menu</span>
               <Bars3Icon aria-hidden="true" className="block h-6 w-6 group-data-[open]:hidden" />
               <XMarkIcon aria-hidden="true" className="hidden h-6 w-6 group-data-[open]:block" />
@@ -30,8 +30,8 @@ export default function Navbar() {
             <div className="flex flex-shrink-0 items-center">
                 <NavLink key="Home" to="/" className="font-semibold text-2xl" >Mealfinder.</NavLink>
             </div>
-            <div className="hidden sm:ml-6 sm:block">
-              <div className="flex space-x-4">
+            <div className="hidden sm:ml-6 sm:block flex-1">
+              <div className="flex justify-center space-x-4">
                 {navigation.map((item) => (
                   <NavLink
                     key={item.name}
@@ -102,7 +102,7 @@ export default function Navbar() {
               to={item.to}
               className={({ isActive }) =>
                 classNames(
-                  isActive ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
+                  isActive ? 'bg-indigo-600 text-white' : 'text-gray-700 hover:bg-indigo-600 hover:text-white',
                   'block rounded-md px-3 py-2 text-base font-medium'
                 )
               }

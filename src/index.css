@@ -4,12 +4,14 @@
 
 /* Custom styles */
 .fade-in {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 1s ease-in, transform 1s ease-in;
-  }
-  
-  .fade-in.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease-in, transform 1s ease-in;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+

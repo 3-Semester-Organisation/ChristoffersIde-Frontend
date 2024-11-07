@@ -76,13 +76,7 @@ export default function RecipeByIngredientAndDietaryLimitations() {
           <IngredientList className="" ingredients={ingredients} />
         </div>
 
-        <div className="container mx-auto p-4">
-          <div className={`fade-in ${visible ? "visible" : ""}`}>
-            <Response data={recipe} />
-          </div>
-        </div>
-
-        <div>
+        <div className="mt-10">
           <button
             onClick={handleSubmit}
             className=" ml-2 mt-4 cursor-pointer rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500"
@@ -91,6 +85,14 @@ export default function RecipeByIngredientAndDietaryLimitations() {
             {loading ? <Bars height="20px" width="46px" /> : "Submit"}
           </button>
         </div>
+
+        <div className="mt-10">
+          <div className={`fade-in ${visible ? "visible" : ""}`}>
+            <Response data={recipe} />
+          </div>
+        </div>
+
+        
       </div>
     </>
   );
