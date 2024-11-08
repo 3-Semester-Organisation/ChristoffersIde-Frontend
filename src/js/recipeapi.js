@@ -1,4 +1,4 @@
-import {checkHttpErrors, makeOption} from "../util.js";
+import {checkHttpErrors, makeOption} from "./util.js";
 
 const HOST = "http://localhost:8080/";
 const RECIPE_BY_PERSON_NAME_URL = "recipe-by-individual";

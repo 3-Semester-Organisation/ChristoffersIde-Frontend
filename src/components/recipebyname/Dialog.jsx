@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { fetchRecipeByPersonName } from "../../js/api/recipeapi";
+import { fetchRecipeByPersonName } from "../../js/recipeapi";
 import Input from "./Input";
 import Response from "./Response";
-import Backdrop from "../backdrop/Backdrop";
+import Backdrop from "../ui/Backdrop";
 
 
 export default function Dialog() {

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import Backdrop from "./backdrop/Backdrop";
+import Backdrop from "./ui/Backdrop";
 
 export default function NotFoundPage() {
     return (

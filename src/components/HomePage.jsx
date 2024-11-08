@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import Backdrop from "./backdrop/Backdrop";
+import Backdrop from "./ui/Backdrop";
 
 export default function HomePage() {
 
