@@ -1,19 +1,17 @@
 import React, { useState } from "react";
 
-export default function IngredientInput( {addIngredient} ) {
+export default function IngredientInput({ addIngredient }) {
   const [newIngredient, setNewIngredient] = useState("");
-
 
   const handleInputChange = (event) => {
     setNewIngredient(event.target.value);
-  }
+  };
 
   const handleSubmit = (event) => {
     event.preventDefault();
     addIngredient(newIngredient);
     setNewIngredient("");
-
-  }
+  };
 
   return (
     <>

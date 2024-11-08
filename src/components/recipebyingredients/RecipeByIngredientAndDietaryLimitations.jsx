@@ -36,18 +36,20 @@ export default function RecipeByIngredientAndDietaryLimitations() {
 
   async function handleSubmit() {
     try {
-        setLoading(true);
+      setLoading(true);
 
-        const dietaryLimitationsPayload = {
-            vegan: dietaryLimitations["Vegan"],
-            vegetarian: dietaryLimitations["Vegetarian"],
-            lactoseIntolerant: dietaryLimitations["Lactose Intolerant"],
-            glutenIntolerant: dietaryLimitations["Gluten Intolerant"]
-        };
+      const dietaryLimitationsPayload = {
+        vegan: dietaryLimitations["Vegan"],
+        vegetarian: dietaryLimitations["Vegetarian"],
+        lactoseIntolerant: dietaryLimitations["Lactose Intolerant"],
+        glutenIntolerant: dietaryLimitations["Gluten Intolerant"],
+      };
 
-        const data = await fetchRecipeByUserRequest(ingredients, dietaryLimitationsPayload);
-        setRecipe((JSON.parse(data.answer)));
-
+      const data = await fetchRecipeByUserRequest(
+        ingredients,
+        dietaryLimitationsPayload
+      );
+      setRecipe(JSON.parse(data.answer));
     } catch (error) {
       console.error(error);
     } finally {
@@ -65,7 +67,7 @@ export default function RecipeByIngredientAndDietaryLimitations() {
           <IngredientInput addIngredient={addIngredient} />
         </div>
 
-        <div className="">
+        <div>
           <Checkbox
             handleCheckbox={handleCheckbox}
             dietaryLimitations={dietaryLimitations}
@@ -91,8 +93,6 @@ export default function RecipeByIngredientAndDietaryLimitations() {
             <Response data={recipe} />
           </div>
         </div>
-
-        
       </div>
     </>
   );

@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { Bars } from "react-loading-icons";
 
-export default function Input({ handleFetch }) { //modtager handleFetch fra parent component (Dialog.jsx)
+export default function Input({ handleFetch }) {
+  //modtager handleFetch fra parent component (Dialog.jsx)
 
   const [name, setName] = useState("");
   const [loading, setLoading] = useState(false); // used for loading icon on submit
@@ -40,7 +41,8 @@ export default function Input({ handleFetch }) { //modtager handleFetch fra pare
             className="ml-2 cursor-pointer rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500"
             disabled={loading} // samme som nedenunder
           >
-            {loading ? <Bars height="20px" width="46px" /> : "Submit"} {/* skifter mellem loading icon og submit alt efter state */}
+            {loading ? <Bars height="20px" width="46px" /> : "Submit"}{" "}
+            {/* skifter mellem loading icon og submit alt efter state */}
           </button>
         </form>
       </div>

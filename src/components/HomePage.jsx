@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import Backdrop from "./ui/Backdrop";
 
 export default function HomePage() {
-
   useEffect(() => {
     const fadeInElements = document.querySelectorAll(".fade-in");
     fadeInElements.forEach((element) => {
