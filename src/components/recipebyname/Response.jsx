@@ -6,6 +6,12 @@ export default function Response({ data }) {
   if (!data) {
     return <></>; // return blank when no data
   }
+  if (!data.ingredients) {
+      return (
+          <div>{data}</div>
+      )
+    }
+
 
   return (
     <div className="p-2 mb-80">
